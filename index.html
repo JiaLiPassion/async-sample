@@ -22,7 +22,7 @@
             console.log('after await test1', result, Zone.current.name);
         }
         console.log('begin test');
-        Zone.current.fork({ name: 'test' }).run(test1);
+        Zone.current.fork({ name: 'test' }).run(test2);
         console.log('outside test', Zone.current.name);
         Zone.current.fork({ name: 'test1' }).run(() => {
             console.log('another test', Zone.current.name);
